@@ -1,0 +1,112 @@
+@import "custom";
+@import "colors";
+body {
+  background-color: $primary-color;
+  color: $navy-blue;
+  font-family: $body-font;
+}
+
+// ---------- HEADER STYLES ------------
+.header {
+  position: relative;
+  background-color: $secondary-color;
+  padding: 20px;
+  color: $primary-color;
+
+  .navbar-brand {
+    img {
+      max-width: 200px;
+      width: 100%;
+    }
+  }
+  .navbar-nav .nav-item .nav-link,
+  .navbar .nav-link {
+    color: $primary-color;
+    font-family: $header-font;
+    font-size: 1.5rem;
+    &:hover {
+      color: darken($highlight-color, 18%);
+      text-decoration: none;
+    }
+  }
+
+  .navbar .nav-link.active,
+  .navbar-nav .nav-item .nav-link.active {
+    font-weight: bold;
+    text-decoration: underline;
+    color: $highlight-color;
+  }
+
+  .overlay {
+    position: fixed;
+    top: 0;
+    right: -250px;
+    width: 250px;
+    height: 100%;
+    background-color: darken($navy-blue, 3%);
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
+    transition: right 0.3s ease;
+    z-index: 1000;
+
+    &.show {
+      right: 0;
+    }
+    .nav-link {
+      padding: 15px 20px;
+      display: block;
+    }
+
+    .nav-link {
+      color: $primary-color;
+      font-family: $header-font;
+
+      &:hover {
+        color: $highlight-color;
+      }
+    }
+  }
+}
+
+// --------- FOOTER STYLES ----------
+footer {
+  background-color: $navy-blue;
+  color: $primary-color;
+  text-align: center;
+  padding: 40px 0;
+
+  .footer-title {
+    color: $highlight-color;
+    margin-bottom: 15px;
+    font-weight: bold;
+    text-decoration: underline;
+  }
+  ul {
+    list-style-type: none;
+    padding: 0;
+
+    li {
+      margin-bottom: 10px;
+
+      i {
+        margin-right: 8px;
+        color: $highlight-color;
+      }
+      a {
+        color: $primary-color;
+        text-decoration: none;
+        &:hover {
+          color: $dark-gray;
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}
+
+// General link styles
+
+@media (max-width: 768px) {
+  .nav-link {
+    font-size: 1rem;
+  }
+}
