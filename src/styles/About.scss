@@ -1,0 +1,143 @@
+@import "custom";
+p {
+  color: $dark-gray;
+}
+.about {
+  .section-title {
+    color: $highlight-color;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    text-align: left;
+    font-weight: bold;
+  }
+
+  .lead {
+    font-size: 1.2rem;
+    color: $primary-color;
+    line-height: 1.6;
+    margin-bottom: 20px;
+  }
+
+  .about-card,
+  .location-card {
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    margin-bottom: 30px;
+    background-color: rgba(255, 255, 255, 0.9);
+
+    .card-img-top {
+      border-radius: 10px 10px 0 0;
+    }
+    .card-body {
+      padding: 20px;
+
+      a.btn-highlight {
+        background-color: $highlight-color;
+        color: black;
+        text-transform: uppercase;
+        font-weight: bold;
+        &:hover {
+          background-color: darken($highlight-color, 10%);
+        }
+      }
+    }
+  }
+
+  .why-choose-section {
+    background-color: lighten($secondary-color, 10%);
+    padding: 40px 20px;
+    border-radius: 10px;
+    text-align: center;
+
+    h2 {
+      color: $primary-color;
+    }
+
+    p {
+      color: $fourth-gray;
+    }
+  }
+
+  h2 {
+    color: $light-gray;
+    font-size: 2rem;
+    margin-top: 30px;
+  }
+
+  p {
+    font-size: 1.1rem;
+    color: $fourth-gray;
+    line-height: 1.6;
+  }
+
+  .contact {
+    margin-top: 40px;
+    padding: 20px;
+    background-color: $light-gray;
+    border-radius: 8px;
+
+    h2 {
+      color: $navy-blue;
+    }
+
+    p {
+      color: $fifth-gray;
+    }
+
+    .form-group {
+      margin-bottom: 15px;
+    }
+
+    button {
+      background-color: $highlight-color;
+      border: none;
+
+      &:hover {
+        background-color: darken($highlight-color, 10%);
+      }
+    }
+  }
+  ul li {
+    color: $primary-color;
+  }
+  // Media query for medium and larger screens
+  @media (min-width: 768px) {
+    .row {
+      display: flex;
+    }
+
+    .about-card,
+    .location-card {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+
+    .about-section,
+    .location-section {
+      padding: 20px;
+    }
+
+    img {
+      max-height: 400px;
+      object-fit: cover;
+      margin-right: 20px;
+    }
+  }
+
+  // Media query for smaller screens
+  @media (max-width: 768px) {
+    .about-card,
+    .location-card {
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    img {
+      margin-bottom: 15px;
+      max-height: 200px;
+      object-fit: cover;
+    }
+  }
+}
