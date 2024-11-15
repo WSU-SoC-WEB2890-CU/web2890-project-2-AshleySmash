@@ -1,17 +1,14 @@
-// src/components/Layout/Footer.js
-import React from "react";
+import React from "react"
 
 const Footer = () => {
   return (
     <footer className="footer bg-navy text-light p-4">
       <div className="container">
-        {/* Centered Contact Us Title */}
         <div className="text-center mb-4">
-          <h3 className="footer-title text-decoration-none">Contact Us</h3>
+          <h3 className="footer-title text-decoration-none fs-1">Contact Us</h3>
         </div>
 
         <div className="row">
-          {/* Postal Addresses Section */}
           <div className="col-md-4 mb-4">
             <h5 className="footer-title">Postal Addresses</h5>
             <ul className="list-unstyled">
@@ -70,7 +67,6 @@ const Footer = () => {
             </ul>
           </div>
 
-          {/* Email Section */}
           <div className="col-md-4 mb-4">
             <h5 className="footer-title">Email</h5>
             <ul className="list-unstyled">
@@ -85,33 +81,26 @@ const Footer = () => {
                 <i className="fas fa-envelope"></i>
                 <strong> Sales:</strong>
                 <span className="d-block text-muted">
-                  <a href="mailto:sales@home-marine.com">
-                    sales@home-marine.com
-                  </a>
+                  <a href="mailto:sales@home-marine.com">sales@home-marine.com</a>
                 </span>
               </li>
               <li>
                 <i className="fas fa-envelope"></i>
                 <strong> Support:</strong>
                 <span className="d-block text-muted">
-                  <a href="mailto:support@home-marine.com">
-                    support@home-marine.com
-                  </a>
+                  <a href="mailto:support@home-marine.com">support@home-marine.com</a>
                 </span>
               </li>
               <li>
                 <i className="fas fa-envelope"></i>
                 <strong> Purchase:</strong>
                 <span className="d-block text-muted">
-                  <a href="mailto:purchase@home-marine.com">
-                    purchase@home-marine.com
-                  </a>
+                  <a href="mailto:purchase@home-marine.com">purchase@home-marine.com</a>
                 </span>
               </li>
             </ul>
           </div>
 
-          {/* Phone & Fax Section */}
           <div className="col-md-4 mb-4">
             <h5 className="footer-title">Phone & Fax</h5>
             <ul className="list-unstyled">
@@ -127,13 +116,10 @@ const Footer = () => {
           </div>
         </div>
 
-        {/* Copyright Notice */}
-        <p className="text-center mt-4 mb-0">
-          &copy; {new Date().getFullYear()} HMC. All rights reserved.
-        </p>
+        <p className="text-center mt-4 mb-0">&copy; {new Date().getFullYear()} HMC. All rights reserved.</p>
       </div>
     </footer>
-  );
-};
+  )
+}
 
-export default Footer;
+export default Footer

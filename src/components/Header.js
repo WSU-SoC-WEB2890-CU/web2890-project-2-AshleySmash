@@ -1,29 +1,28 @@
-// src/components/Layout/Header.js
-import React, { useState, useEffect, useRef } from "react";
-import { NavLink, Link } from "react-router-dom";
+import React, { useState, useEffect, useRef } from "react"
+import { NavLink, Link } from "react-router-dom"
 
-import logoImg from "../assets/images/logos/HMC-Clark_FINAL-RGB_HMC-RGB-DarkBG.jpg";
+import logoImg from "../assets/images/logos/HMC-Clark_FINAL-RGB_HMC-RGB-DarkBG.jpg"
 
 const Header = () => {
-  const [isOpen, setIsOpen] = useState(false);
-  const overlayRef = useRef(null);
+  const [isOpen, setIsOpen] = useState(false)
+  const overlayRef = useRef(null)
 
   const toggleNav = () => {
-    setIsOpen((prev) => !prev);
-  };
+    setIsOpen((prev) => !prev)
+  }
 
   useEffect(() => {
     const handleClickOutside = (event) => {
       if (overlayRef.current && !overlayRef.current.contains(event.target)) {
-        setIsOpen(false);
+        setIsOpen(false)
       }
-    };
+    }
 
-    document.addEventListener("mousedown", handleClickOutside);
+    document.addEventListener("mousedown", handleClickOutside)
     return () => {
-      document.removeEventListener("mousedown", handleClickOutside);
-    };
-  }, []);
+      document.removeEventListener("mousedown", handleClickOutside)
+    }
+  }, [])
 
   return (
     <header className="header">
@@ -44,47 +43,27 @@ const Header = () => {
         <div className={`collapse navbar-collapse justify-content-end`}>
           <ul className="navbar-nav">
             <li className="nav-item px-lg-3">
-              <NavLink
-                className="nav-link"
-                to="/"
-                onClick={() => setIsOpen(false)}
-              >
+              <NavLink className="nav-link" to="/" onClick={() => setIsOpen(false)}>
                 Home
               </NavLink>
             </li>
             <li className="nav-item px-lg-3">
-              <NavLink
-                className="nav-link"
-                to="/yachts"
-                onClick={() => setIsOpen(false)}
-              >
+              <NavLink className="nav-link" to="/yachts" onClick={() => setIsOpen(false)}>
                 Yachts
               </NavLink>
             </li>
             <li className="nav-item px-lg-3">
-              <NavLink
-                className="nav-link"
-                to="/cruise-ships"
-                onClick={() => setIsOpen(false)}
-              >
+              <NavLink className="nav-link" to="/cruise-ships" onClick={() => setIsOpen(false)}>
                 Cruise Ships
               </NavLink>
             </li>
             <li className="nav-item px-lg-3">
-              <NavLink
-                className="nav-link"
-                to="/commercial-vessels"
-                onClick={() => setIsOpen(false)}
-              >
+              <NavLink className="nav-link" to="/commercial-vessels" onClick={() => setIsOpen(false)}>
                 Commercial Vessels
               </NavLink>
             </li>
             <li className="nav-item  ps-lg-3 pe-lg-5">
-              <NavLink
-                className="nav-link"
-                to="/about"
-                onClick={() => setIsOpen(false)}
-              >
+              <NavLink className="nav-link" to="/about" onClick={() => setIsOpen(false)}>
                 About HMC
               </NavLink>
             </li>
@@ -100,7 +79,7 @@ const Header = () => {
               className="nav-link"
               to="/"
               onClick={() => {
-                setIsOpen(false);
+                setIsOpen(false)
               }}
             >
               Home
@@ -111,7 +90,7 @@ const Header = () => {
               className="nav-link"
               to="/yachts"
               onClick={() => {
-                setIsOpen(false);
+                setIsOpen(false)
               }}
             >
               Yachts
@@ -122,7 +101,7 @@ const Header = () => {
               className="nav-link"
               to="/cruise-ships"
               onClick={() => {
-                setIsOpen(false);
+                setIsOpen(false)
               }}
             >
               Cruise Ships
@@ -133,7 +112,7 @@ const Header = () => {
               className="nav-link"
               to="/commercial-vessels"
               onClick={() => {
-                setIsOpen(false);
+                setIsOpen(false)
               }}
             >
               Commercial Vessels
@@ -144,7 +123,7 @@ const Header = () => {
               className="nav-link"
               to="/about"
               onClick={() => {
-                setIsOpen(false);
+                setIsOpen(false)
               }}
             >
               About HMC
@@ -153,7 +132,7 @@ const Header = () => {
         </ul>
       </div>
     </header>
-  );
-};
+  )
+}
 
-export default Header;
+export default Header
