@@ -1,0 +1,51 @@
+
+WEB 2890 Project Feedback Form
+Name of Student being Reviewed:  Ashley Cox
+Name of Reviewer:  Preston Cox
+Company/Position: Hill Air Force Base A10 Team Lead Process Engineer (Mechanical Engineer)
+Contact information (phone, email): 385-405-5407
+Relation to Student (check one):    Client [  X ]                                      Friend [   ]	
+                                               Acquaintance [   ]                            Professional [1]	
+                                      Web/UX professor [   ]          Weber State professor [   ]    
+                                        Weber State staff [   ]            Other, please specify: ______________________
+Comments from Reviewer
+Please provide ratings and comments on the following project criteria (1 = low and 5 = high):
+1   2   3   4   5       Overall project quality 
+Comments: Overall layout, and quality was very good. Excellent presentation, and site was easy to navigate.
+
+
+1   2   3   4   5       Level of creativity and originality demonstrated in the project
+Comments: 
+
+
+1   2   3   4   5       Project contains an appropriate amount of information to meet its objectives.
+Comments:
+
+
+1   2   3   4   5       Quality of elements making up project (HTML/CSS, photos, vector graphics, video, audio, animation, web objects/elements)
+Comments: I really like the overall look and layout of the website. Excellent pictures, visuals, and a very clean layout makes navigation intuitive.
+
+
+1   2   3   4   5       Project design (color, fonts, typography, layout/composition). The overall concept/theme/unified look of the website is effective. 
+Comments: Verry professional look and feel.
+
+
+Do you feel this project is appropriate to include in the student's portfolio considering skill-level demonstrated? 
+Comments: Yes, it demonstrates the capability and skill in developing professional websites.
+
+Did you experience any technical difficulties as you navigated through the website or displayed the project?
+Comments: no, only unexpected results were there was not a way view the photo gallery. 
+
+
+
+What are the main strengths of the project?
+Comments: Organization of the page, simplicity of use and navigation, intuitive way the business’s purpose and products were displayed using visuals and pictures. Clean professional look. 
+
+
+
+What are the main things that could be improved with the project?
+Comments: All learn more links direct you to the same “About HMC” page. This is probably in scope for the current project, but it was just an observation.
+
+
+
+

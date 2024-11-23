@@ -1,0 +1,83 @@
+@import "colors";
+@import "mixins";
+
+// Define custom
+$secondary: lighten($navy-blue, 10%);
+
+// Import Bootstrap
+@import "bootstrap";
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+// typography
+h1,
+h2 {
+  font-family: $header-font;
+  font-weight: bold;
+}
+
+p {
+  font-family: $body-font;
+  line-height: 1.6;
+  color: $fourth-gray;
+}
+
+// navigation
+.navbar-nav .nav-item .nav-link {
+  color: $primary-color;
+  font-family: $header-font;
+  font-size: 1.2rem;
+
+  &:hover {
+    color: $highlight-color;
+  }
+}
+
+.navbar-nav .nav-item .nav-link.active {
+  font-weight: bold;
+  color: $highlight-color;
+  text-decoration: underline;
+}
+
+footer {
+  padding: 50px;
+  background-color: $navy-blue;
+  color: $primary-color;
+
+  .footer-title {
+    color: $highlight-color;
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+  }
+
+  a {
+    color: $primary-color;
+    &:hover {
+      color: $highlight-color;
+      text-decoration: underline;
+    }
+  }
+}
+
+// responsive adjustment
+
+@media (max-width: 768px) {
+  .hero-section {
+    height: 50vh;
+  }
+
+  .feature-card,
+  .gallery img {
+    margin-bottom: 15px;
+    width: 100%;
+  }
+}

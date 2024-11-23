@@ -1,0 +1,52 @@
+WEB 2890 Project Feedback Form
+Name of Student being Reviewed:  Ashley Cox
+Name of Reviewer: Jenny Cox
+Company/Position: Nurse
+Contact information (phone, email): 385-405-9344
+Relation to Student (check one):    Client [   ]                                      Friend [   ]	
+                                               Acquaintance [   ]                            Professional [   ]	
+                                      Web/UX professor [   ]          Weber State professor [   ]    
+                                        Weber State staff [   ]            Other, please specify: __Mom____________________
+Comments from Reviewer
+Please provide ratings and comments on the following project criteria (1 = low and 5 = high):
+1   2   3   4   5       Overall project quality 
+Comments: It looks professional. I like how you can tab between fields and how the hover function works.
+
+
+1   2   3   4   5       Level of creativity and originality demonstrated in the project
+Comments: It has all the aspects of a typical website. I like the color scheme.
+
+
+1   2   3   4   5       Project contains an appropriate amount of information to meet its objectives.
+Comments: I don’t know if it’s part of the assignment or not but it would be nice if you click on the “learn more” tab under each option of ship if it took you to a new page.
+
+
+1   2   3   4   5       Quality of elements making up project (HTML/CSS, photos, vector graphics, video, audio, animation, web objects/elements)
+Comments: It would be better if there were different pictures not the same one per page.
+
+
+1   2   3   4   5       Project design (color, fonts, typography, layout/composition). The overall concept/theme/unified look of the website is effective. 
+Comments: Looks very good. It looks like an official, quality site. I went on a cruise this year and had to deal with their poor website. This is much better, easier to use and less glitchy. I was frustrated every time I had to use it. This is great.
+
+
+Do you feel this project is appropriate to include in the student's portfolio considering skill-level demonstrated? 
+Comments: Yes, once the pictures have been updated and the more links to more pages. Maybe under the “contact us” section after you fill it in and submit there could be a confirmation that it worked?
+
+
+Did you experience any technical difficulties as you navigated through the website or displayed the project?
+Comments: No
+
+
+
+What are the main strengths of the project?
+Comments: It looks very nice and it is smooth and has dynamic feedback which I like.
+
+
+
+What are the main things that could be improved with the project?
+Comments: Take the time to use varied pictures.
+
+
+
+
+

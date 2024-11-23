@@ -1,0 +1,40 @@
+@import "custom";
+
+.contact {
+  margin-top: 40px;
+  padding: 20px;
+  background-color: $primary-color;
+  border-radius: 8px;
+  max-width: 1000px;
+
+  h2 {
+    color: $navy-blue;
+  }
+
+  p {
+    color: $secondary-color;
+  }
+
+  .form-group {
+    margin-bottom: 15px;
+
+    .is-invalid {
+      border-color: $highlight-color;
+    }
+
+    .invalid-feedback {
+      color: red;
+      font-size: 0.9rem;
+      margin-top: 0.25rem;
+    }
+  }
+
+  button {
+    background-color: $highlight-color;
+    border: none;
+
+    &:hover {
+      background-color: darken($highlight-color, 10%);
+    }
+  }
+}

@@ -1,0 +1,132 @@
+// src/styles/Homepage.scss
+@import "custom";
+@import "colors";
+
+.homepage {
+  .btn-highlight {
+    @include button-styles;
+  }
+
+  .header-title {
+    margin-bottom: 30px;
+    color: $secondary-color;
+    font-size: 2.5rem;
+  }
+
+  .hero-section {
+    @include hero-styles;
+    background-image: url("../assets/images/steinar-engeland-VKlIQTmJfVY-unsplash.jpg");
+    color: $secondary-gray;
+
+    .overlay {
+      @include overlay-styles;
+      max-width: 700px;
+
+      h1 {
+        font-size: 3rem;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+      }
+
+      p {
+        color: $fourth-gray;
+      }
+      .tagline {
+        font-size: 1.2rem;
+        margin: 10px 0;
+        font-style: italic;
+      }
+    }
+  }
+
+  .service-card {
+    background-color: $primary-color;
+    color: lighten($secondary-color, 10%);
+
+    i {
+      font-size: 3rem;
+      margin-bottom: 10px;
+    }
+    p {
+      color: $navy-blue;
+    }
+  }
+
+  .image-section {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin: 2rem 0;
+
+    .image-card {
+      position: relative;
+      width: 350px;
+      height: 275px;
+      border-radius: 10px;
+      transition: background-color 0.3s ease;
+      transition: transform 0.3s ease;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(0, 0, 0, 0.5);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        text-align: center;
+      }
+
+      h2 {
+        margin: 0;
+        color: white;
+        font-size: 2rem;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+
+        @media (min-width: 768px) {
+          font-size: 1.7rem;
+        }
+        @media (min-width: 992px) {
+          font-size: 2rem;
+        }
+      }
+
+      .btn-highlight {
+        @include button-styles;
+        position: absolute;
+        bottom: 10px;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+
+      &:hover {
+        .overlay {
+          background-color: rgba(0, 0, 0, 0.7);
+        }
+        transform: scale(1.02);
+      }
+    }
+  }
+
+  // Media query for smaller screens
+  @media (max-width: 768px) {
+    .image-section {
+      flex-direction: column;
+      align-items: center;
+      margin: 0;
+
+      .image-card {
+        width: 90%;
+        margin: 10px 0;
+      }
+    }
+  }
+}
