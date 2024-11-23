@@ -26,7 +26,7 @@ const Header = () => {
 
   return (
     <header className="header">
-      <nav className="navbar navbar-expand-md navbar-light">
+      <nav className="navbar navbar-expand-lg navbar-light">
         <Link className="navbar-brand text-white p-0 ms-lg-4" to="/">
           <img src={logoImg} alt="HMC logo" className="p-0 m-0"></img>
         </Link>
@@ -62,9 +62,14 @@ const Header = () => {
                 Commercial Vessels
               </NavLink>
             </li>
-            <li className="nav-item  ps-lg-3 pe-lg-5">
+            <li className="nav-item ps-lg-3">
               <NavLink className="nav-link" to="/about" onClick={() => setIsOpen(false)}>
                 About HMC
+              </NavLink>
+            </li>
+            <li className="nav-item  ps-lg-3 pe-lg-5">
+              <NavLink className="nav-link" to="/contact-us" onClick={() => setIsOpen(false)}>
+                Contact Us
               </NavLink>
             </li>
           </ul>

@@ -1,9 +1,22 @@
 @import "custom";
-p {
-  color: $dark-gray;
-}
+
 .about {
-  .section-title {
+  .why-choose-section {
+    background-color: $primary-color;
+    padding: 40px 20px;
+    text-align: center;
+
+    h1 {
+      color: $secondary-color;
+    }
+    h3 {
+      color: lighten($secondary-color, 15%);
+    }
+    p {
+      color: $dark-gray;
+    }
+  }
+  h2.section-title {
     color: $highlight-color;
     font-size: 2.5rem;
     margin-bottom: 20px;
@@ -11,7 +24,7 @@ p {
     font-weight: bold;
   }
 
-  .lead {
+  p.lead {
     font-size: 1.2rem;
     color: $primary-color;
     line-height: 1.6;
@@ -30,31 +43,6 @@ p {
     }
     .card-body {
       padding: 20px;
-
-      a.btn-highlight {
-        background-color: $highlight-color;
-        color: black;
-        text-transform: uppercase;
-        font-weight: bold;
-        &:hover {
-          background-color: darken($highlight-color, 10%);
-        }
-      }
-    }
-  }
-
-  .why-choose-section {
-    background-color: lighten($secondary-color, 10%);
-    padding: 40px 20px;
-    border-radius: 10px;
-    text-align: center;
-
-    h2 {
-      color: $primary-color;
-    }
-
-    p {
-      color: $fourth-gray;
     }
   }
 
@@ -65,8 +53,7 @@ p {
   }
 
   p {
-    font-size: 1.1rem;
-    color: $fourth-gray;
+    font-size: 1.3rem;
     line-height: 1.6;
   }
 
@@ -78,10 +65,6 @@ p {
 
     h2 {
       color: $navy-blue;
-    }
-
-    p {
-      color: $fifth-gray;
     }
 
     .form-group {

@@ -116,7 +116,9 @@ const Footer = () => {
           </div>
         </div>
 
-        <p className="text-center mt-4 mb-0">&copy; {new Date().getFullYear()} HMC. All rights reserved.</p>
+        <p className="text-center mt-4 mb-0 text-white-50">
+          &copy; {new Date().getFullYear()} HMC. All rights reserved.
+        </p>
       </div>
     </footer>
   )

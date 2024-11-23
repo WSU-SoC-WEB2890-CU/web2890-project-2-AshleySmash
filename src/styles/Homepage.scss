@@ -3,74 +3,51 @@
 @import "colors";
 
 .homepage {
+  .btn-highlight {
+    @include button-styles;
+  }
+
   .header-title {
     margin-bottom: 30px;
     color: $secondary-color;
     font-size: 2.5rem;
   }
-  .btn-highlight {
-    background-color: $highlight-color;
-    border: none;
-    padding: 10px 20px;
-    font-size: 1rem;
-    color: black;
-    text-transform: uppercase;
-    &:hover {
-      background-color: darken($highlight-color, 10%);
-    }
-  }
 
   .hero-section {
-    position: relative;
+    @include hero-styles;
     background-image: url("../assets/images/steinar-engeland-VKlIQTmJfVY-unsplash.jpg");
-    background-size: cover;
-    background-position: bottom;
-    height: 60vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     color: $secondary-gray;
 
     .overlay {
-      position: absolute;
-      background-color: rgba(0, 0, 0, 0.8);
-      text-align: center;
+      @include overlay-styles;
       max-width: 700px;
-      width: 90%;
 
       h1 {
         font-size: 3rem;
         text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
       }
 
+      p {
+        color: $fourth-gray;
+      }
       .tagline {
         font-size: 1.2rem;
         margin: 10px 0;
         font-style: italic;
       }
-
-      .btn-highlight {
-        background-color: $highlight-color;
-        border: none;
-        padding: 15px 30px;
-        font-size: 1.2rem;
-        color: black;
-        text-transform: uppercase;
-        &:hover {
-          background-color: darken($highlight-color, 10%);
-        }
-      }
     }
   }
 
   .service-card {
-    transition: transform 0.3s ease;
+    background-color: $primary-color;
+    color: lighten($secondary-color, 10%);
+
     i {
       font-size: 3rem;
       margin-bottom: 10px;
     }
-    &:hover {
-      transform: translateY(-5px);
+    p {
+      color: $navy-blue;
     }
   }
 
@@ -86,6 +63,7 @@
       height: 275px;
       border-radius: 10px;
       transition: background-color 0.3s ease;
+      transition: transform 0.3s ease;
 
       img {
         width: 100%;
@@ -112,22 +90,21 @@
         color: white;
         font-size: 2rem;
         text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+
+        @media (min-width: 768px) {
+          font-size: 1.7rem;
+        }
+        @media (min-width: 992px) {
+          font-size: 2rem;
+        }
       }
 
       .btn-highlight {
+        @include button-styles;
         position: absolute;
         bottom: 10px;
         left: 50%;
         transform: translateX(-50%);
-        background-color: $highlight-color;
-        border: none;
-        padding: 10px 20px;
-        font-size: 1rem;
-        color: black;
-        text-transform: uppercase;
-        &:hover {
-          background-color: darken($highlight-color, 10%);
-        }
       }
 
       &:hover {
@@ -139,15 +116,8 @@
     }
   }
 
-  .cta-section h2 {
-    color: $primary-color;
-  }
-
   // Media query for smaller screens
   @media (max-width: 768px) {
-    .hero-section {
-      height: 50vh;
-    }
     .image-section {
       flex-direction: column;
       align-items: center;

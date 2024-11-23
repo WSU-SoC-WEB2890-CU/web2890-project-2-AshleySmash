@@ -1,4 +1,5 @@
 @import "colors";
+@import "mixins";
 
 // Define custom
 $secondary: lighten($navy-blue, 10%);
@@ -22,6 +23,7 @@ h1,
 h2 {
   font-family: $header-font;
   font-weight: bold;
+  // color: $light-gray;
 }
 
 p {

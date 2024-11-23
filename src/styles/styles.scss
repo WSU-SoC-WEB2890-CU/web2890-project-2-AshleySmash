@@ -1,9 +1,17 @@
 @import "custom";
-@import "colors";
 body {
   background-color: $primary-color;
   color: $navy-blue;
   font-family: $body-font;
+}
+
+.cta-section {
+  @include cta-styles;
+}
+
+.btn,
+div .btn {
+  @include button-styles;
 }
 
 // ---------- HEADER STYLES ------------

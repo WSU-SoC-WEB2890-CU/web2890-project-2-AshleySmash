@@ -1,44 +1,32 @@
 @import "custom";
 
 .boats {
-  padding: 0; // Remove padding to prevent spacing issues
+  padding: 0;
+
+  .boats-body {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
 
   // Hero Section
   .hero-section {
-    display: flex; // Enable flexbox for centering
-    align-items: center; // Center overlay vertically
-    justify-content: center; // Center overlay horizontally
-    position: relative;
-    background-size: cover;
-    background-position: center;
-    height: 60vh; // Adjusted height for a balanced look
-    width: 100%; // Fix horizontal scrolling issue
-    margin: 0; // Remove margin
-    padding: 0; // Remove padding
+    @include hero-styles;
 
     img {
       width: 100%;
       height: 100%;
       object-fit: cover;
-      border-radius: 0; // Remove border-radius to align with edges
+      border-radius: 0;
     }
   }
 
-  // Hero Section Overlay
+  // Overlay Styling
   .overlay {
-    background: rgba(0, 0, 0, 0.6); // Dark overlay for text readability
-    padding: 40px;
-    border-radius: 0; // Remove border-radius
-    text-align: center;
-    max-width: 80%; // Adjust width as needed
+    @include overlay-styles;
 
     h1 {
-      font-size: 3.5rem;
-      letter-spacing: 1px;
       font-family: $header-font;
       color: $highlight-color;
-      text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
-      margin-bottom: 20px;
     }
 
     p {
@@ -48,68 +36,117 @@
     }
   }
 
-  .yachts-body,
-  .boats-body {
-    max-width: 1200px; // Center the container by limiting max-width
-    margin: 0 auto; // Center horizontally
-  }
-  // Section Title
+  // Body Section
+
   .section-title {
-    color: $highlight-color;
-    font-size: 2.5rem;
-    margin: 40px 0 20px;
-    text-align: center;
-    font-family: $header-font;
+    @include section-title-styles;
   }
 
-  // Feature Card
-  .feature-card {
-    width: 96%;
-    margin: 0 auto;
-    background-color: $light-gray;
-    border-radius: 10px;
-    padding: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition:
-      transform 0.2s ease,
-      box-shadow 0.2s ease;
-    text-align: center;
+  // Feature Card Styling
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+  }
 
+  .feature-card {
+    @include card-styles;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
     h5 {
       font-size: 1.5rem;
-      color: $navy-blue;
+      color: $secondary-color;
       margin-top: 10px;
       font-family: $header-font;
     }
 
     p {
-      color: darken($fifth-gray, 20%);
-      font-size: 1rem;
+      font-family: $body-font;
+      color: $secondary-color;
+      font-size: 1.1rem;
       margin: 15px 0;
     }
 
-    &:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    img {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+      margin-bottom: 15px;
+    }
+    @media (max-width: 767px) {
+      max-width: 60%;
+      margin: 0 auto;
     }
   }
 
-  .boats-body .feature-card {
-    background-color: $fourth-gray;
+  // Modal Styling for Learn More Pop-up
+  .modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+
     p {
-      color: $dark-gray;
+      color: $secondary-color;
+      font-size: 1.2rem;
+    }
+    .modal-content {
+      background: $primary-color;
+      padding: 2rem;
+      border-radius: 10px;
+      position: relative;
+      max-width: 500px;
+      width: 90%;
+      text-align: center;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    .modal-close {
+      position: absolute;
+      top: -10px;
+      right: 10px;
+      background: transparent;
+      border: none;
+      font-size: 3rem;
+      cursor: pointer;
+      color: $secondary-color;
+
+      &:hover {
+        color: darken($secondary-color, 20%);
+      }
+    }
+
+    .modal-image {
+      margin-top: 1rem;
+      border-radius: 10px;
+      max-height: 300px;
+      object-fit: cover;
+      width: auto;
+      max-width: 100%;
     }
   }
-  // Gallery
+
+  // Gallery Styles
   .gallery {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 15px;
-    width: 96%; // Make gallery span full width of the container
     margin: 0 auto;
+
     img {
+      cursor: pointer;
       width: 100%;
+      height: 200px;
       border-radius: 8px;
+      object-fit: cover;
       transition:
         transform 0.3s ease,
         box-shadow 0.3s ease;
@@ -120,54 +157,77 @@
         box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
       }
     }
+
+    @media (max-width: 768px) {
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    }
   }
 
-  // Call to Action Section
-  .cta-section {
-    background: linear-gradient(to right, $secondary-color, lighten($secondary-color, 20%));
-    padding: 40px;
-    text-align: center;
-    color: $primary-color;
-    border-radius: 1rem; // Remove border-radius
-    width: 90%; // Fix horizontal scrolling issue
-    margin: 0 auto; // Remove margins
+  .gallery-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
 
-    h2 {
-      font-size: 2.5rem;
-      font-family: $header-font;
-      margin-bottom: 20px;
-    }
+    .expanded-image-container {
+      position: relative;
+      max-width: 90%;
+      max-height: 90%;
+      border-radius: 10px;
 
-    .btn-highlight {
-      background-color: $highlight-color;
-      color: black;
-      font-size: 1.2rem;
-      padding: 12px 24px;
-      font-family: $header-font;
-      transition: all 0.3s ease;
-
-      &:hover {
-        background-color: darken($highlight-color, 10%);
-        transform: scale(1.1);
+      img {
+        display: block;
+        width: auto;
+        height: auto;
+        max-width: 100%;
+        max-height: 100%;
+        border-radius: 10px;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+
+        transition: none;
+
+        &:hover {
+          transform: none; /* No scaling on hover */
+          box-shadow: none; /* No shadow change on hover */
+        }
+      }
+
+      .close-btn {
+        position: absolute;
+        top: -10px;
+        right: -10px;
+        background: rgba(255, 255, 255, 0.8);
+        border: none;
+        color: black;
+        font-size: 2rem;
+        cursor: pointer;
+        padding: 0.5rem;
+        border-radius: 50%;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+        transition: transform 0.2s ease;
+
+        &:hover {
+          transform: scale(1.1);
+          background: rgba(255, 255, 255, 1);
+        }
       }
     }
   }
 
+  // CTA Section
+  .cta-section {
+    @include cta-styles;
+  }
+
   // Responsive Adjustments
   @media (max-width: 768px) {
-    .hero-section {
-      height: 50vh; // Adjusted height for smaller screens
-      width: 100%; // Fix horizontal scrolling issue
-      margin: 0; // Remove margin
-      padding: 0; // Remove padding
-    }
-
     .overlay {
-      width: 90%; // Slight padding on the sides for smaller screens
-      border-radius: 0; // Remove border-radius for full width
-      padding: 20px;
-
       h1 {
         font-size: 2rem;
       }
@@ -175,22 +235,6 @@
       p {
         font-size: 1rem;
       }
-    }
-
-    .feature-card {
-      width: 75%;
-    }
-    .gallery {
-      width: 75%;
-      img {
-        margin: 0 auto;
-        width: 100%;
-      }
-    }
-    .cta-section {
-      width: 100%; // Fix horizontal scrolling issue
-      margin: 0; // Remove margins
-      border-radius: 0;
     }
   }
 }
